@@ -1,0 +1,342 @@
+/* DPMC Inspired Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --dpmc-blue: #005eb8; /* Official-looking lighter blue */
+    --dpmc-dark-blue: #003366; /* Deep corporate blue */
+    --text-color: #333;
+    --light-gray: #f8f9fa;
+    --border-color: #e9ecef;
+    --font-stack: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-stack);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+/* Top Contact Bar */
+.top-bar {
+    background-color: var(--dpmc-dark-blue);
+    color: #fff;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.top-bar-flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-item i {
+    color: #4db8ff;
+}
+
+/* Navbar */
+.main-header {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dpmc-dark-blue);
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.brand-sub {
+    font-size: 0.75rem;
+    color: #666;
+    font-weight: 400;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--dpmc-blue);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 600px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    background-image: url('../img/hero_main.png'); /* Using the generated/copied image */
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,51,102,0.85) 0%, rgba(0,51,102,0.4) 60%, rgba(255,255,255,0) 100%);
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    color: #fff;
+    max-width: 600px;
+    padding-left: 15px; /* Aligns with container padding */
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    border-left: 4px solid #4db8ff;
+    padding-left: 15px;
+}
+
+.btn-primary {
+    background-color: var(--dpmc-blue);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background 0.3s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: var(--dpmc-dark-blue);
+}
+
+/* Features/Services */
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: var(--dpmc-dark-blue);
+    margin-bottom: 15px;
+}
+
+.section-title .divider {
+    height: 3px;
+    width: 60px;
+    background: var(--dpmc-blue);
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background: var(--dpmc-dark-blue);
+    padding: 20px;
+    text-align: center;
+}
+
+.card-header i {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.card-body {
+    padding: 30px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.card-body h3 {
+    margin-top: 0;
+    color: var(--dpmc-dark-blue);
+    margin-bottom: 15px;
+}
+
+.card-body p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Info Banner */
+.info-banner {
+    background-color: var(--light-gray);
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.info-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info-text h3 {
+    margin: 0 0 10px 0;
+    color: var(--dpmc-dark-blue);
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding-top: 60px;
+}
+
+.footer-main {
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-col h4 {
+    color: #fff;
+    border-bottom: 2px solid var(--dpmc-blue);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.contact-list li {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+    color: #ccc;
+    align-items: center;
+}
+
+.contact-list i {
+    color: var(--dpmc-blue);
+}
+
+/* Phone Numbers in Footer */
+.big-phone {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.copyright {
+    background: #111;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.85rem;
+    color: #666;
+    border-top: 1px solid #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        padding: 15px 0;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .top-bar-flex {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
