@@ -31,8 +31,8 @@ img {
 .top-bar {
     background-color: var(--dpmc-dark-blue);
     color: #fff;
-    padding: 10px 0;
-    font-size: 0.9rem;
+    padding: 5px 0; /* Compact padding */
+    font-size: 0.8rem; /* Smaller, sleek font */
 }
 
 .container {
@@ -43,9 +43,9 @@ img {
 
 .top-bar-flex {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Align right */
     align-items: center;
-    gap: 20px;
+    gap: 30px; /* Adequate spacing */
 }
 
 .contact-item {
@@ -145,6 +145,8 @@ img {
     display: flex; /* Centering content */
     align-items: center; 
     justify-content: center;
+    height: 100%; /* Ensure full height for vertical centering */
+    width: 100%;
 }
 
 /* Slide Overlay */
@@ -166,6 +168,14 @@ img {
     max-width: 900px;
     padding: 0 20px;
     margin: 0 auto;
+    
+    /* Flexbox Centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .hero-title {
@@ -208,6 +218,33 @@ img {
 .swiper-pagination-bullet-active {
     opacity: 1;
     background: var(--dpmc-blue) !important;
+}
+
+/* Swiper Text Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 50px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.swiper-slide-active .hero-title {
+    animation: fadeInUp 0.8s ease-out both;
+    animation-delay: 0.3s;
+}
+
+.swiper-slide-active .hero-subtitle {
+    animation: fadeInUp 0.8s ease-out both;
+    animation-delay: 0.5s;
+}
+
+.swiper-slide-active .btn-primary {
+    animation: fadeInUp 0.8s ease-out both;
+    animation-delay: 0.7s;
 }
 
 @media (max-width: 768px) {
