@@ -11,6 +11,8 @@
 
     <!-- Custom DPMC Style -->
     <link rel="stylesheet" href="assets/css/dpmc_style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -56,18 +58,57 @@
     </header>
 
     <!-- Hero Section -->
+    <!-- Hero Section -->
     <section class="hero-section">
-        <div class="hero-overlay">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">PIERIS MOTORS KEGALLE</h1>
-                    <div class="hero-subtitle">Authorized Sales Dealer for David Pieris Motors Company PVT LTD</div>
-                    <p style="margin-bottom: 30px; font-size: 1.1rem; opacity: 0.9;">
-                        Experience the power and reliability of Bajaj. Your trusted partner for all Bajaj vehicle needs
-                        in Sabaragamuwa.
-                    </p>
-                    <a href="#" class="btn-primary">Explore Vehicles</a>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+
+                <div class="swiper-slide" style="background-image: url('assets/img/hero_motorcycle.png');">
+                    <div class="slide-overlay"></div>
+                    <div class="hero-content">
+                        <h1 class="hero-title">Welcome to Pieris Motors Kegalle</h1>
+                        <p class="hero-subtitle">Your Authorized Sales Dealer for Bajaj Motorcycles.</p>
+                        <a href="#" class="btn-primary">Explore Our Models</a>
+                    </div>
                 </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide" style="background-image: url('assets/img/hero_bike_dominar.png');">
+                    <div class="slide-overlay"></div>
+                    <div class="hero-content">
+                        <h1 class="hero-title">Dominate Every Road</h1>
+                        <p class="hero-subtitle">Experience the power of the Bajaj Dominar 400.</p>
+                        <a href="#" class="btn-primary">View Dominar</a>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide" style="background-image: url('assets/img/hero_main.png');">
+                    <div class="slide-overlay"></div>
+                    <div class="hero-content">
+                        <h1 class="hero-title">Your Trusted Automotive Partner</h1>
+                        <p class="hero-subtitle">Authorized Dealer for David Pieris Motor Company. Genuine Vehicles,
+                            Spare Parts & Service in Sabaragamuwa.</p>
+                        <a href="#" class="btn-primary">Contact Us Today</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Swiper Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Welcome / About Us Section -->
+    <section class="welcome-section section-padding">
+        <div class="container">
+            <div class="welcome-content">
+                <h2>Welcome to Pieris Motors Kegalle</h2>
+                <p>We are the premier authorized sales dealer for David Pieris Motor Company (Pvt) Ltd in the Kegalle
+                    district. With a reputation for trust and excellence, we offer the complete range of Bajaj
+                    Motorcycles, Three-wheelers, and the Bajaj QUTE. Visit us today for genuine vehicles, spare parts,
+                    and superior customer service.</p>
             </div>
         </div>
     </section>
@@ -205,6 +246,68 @@
         </div>
     </section>
 
+    <!-- Featured Products Section -->
+    <section class="products-section section-padding" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Models</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1: Dominar 400 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="assets/img/hero_bike_dominar.png" alt="Bajaj Dominar 400">
+                        <span class="badge">Top Seller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Bajaj Dominar 400</h3>
+                        <p class="product-cat">Sports Tourer</p>
+                        <a href="#" class="btn-outline">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 2: Pulsar NS200 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="assets/img/hero_motorcycle.png" alt="Bajaj Pulsar">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bajaj Pulsar NS200</h3>
+                        <p class="product-cat">Naked Sports</p>
+                        <a href="#" class="btn-outline">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 3: CT100 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="assets/img/hero_bike_ct100.png" alt="Bajaj CT100">
+                        <span class="badge" style="background-color: #28a745;">Best Mileage</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Bajaj CT100</h3>
+                        <p class="product-cat">Commuter</p>
+                        <a href="#" class="btn-outline">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 4: RE 4S -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="assets/img/hero_threewheeler.png" alt="Bajaj RE 4S">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bajaj RE 4S</h3>
+                        <p class="product-cat">Three Wheeler</p>
+                        <a href="#" class="btn-outline">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Call to Action Banner -->
     <section class="info-banner section-padding">
         <div class="container">
@@ -285,6 +388,36 @@
             document.getElementById('navLinks').classList.toggle('active');
         });
     </script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 0,
+            centeredSlides: true,
+            loop: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>
+```
